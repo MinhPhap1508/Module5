@@ -25,12 +25,11 @@ let courses = [
     rating: 3.5, 
   }, 
 ];
-
-// let arr = courses.filter((element)=>element.rating>=4)
-// console.log(arr);
-
-let arr = courses.filter((element)=>element.rating<4);
-let arr1 = arr.map(element=>element.id+"-"+element.title+"-"+element.rating);
+// yêu cầu 1
+let arr = courses.filter((element)=>element.rating>=4)
+console.log(arr);
+// yêu cầu 2
+let arr1 = courses.filter((element)=>element.rating<4).map(element=>element.id+"-"+element.title+"-"+element.rating);
 console.log(arr1);
 // yêu cầu 3
 let addedCourses = [ 
