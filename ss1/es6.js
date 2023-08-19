@@ -49,5 +49,7 @@ let addedCourses = [
       rating: 3.8, 
     } 
   ]; 
-  let arr3 = [...courses,...addedCourses];
-  console.log(arr3);
+  // let arr3 = [...courses,...addedCourses];
+  // console.log(arr3);
+  const arr3 = (courses,addedCourses) => [...courses,...addedCourses];
+  console.log(arr3(courses,addedCourses));
