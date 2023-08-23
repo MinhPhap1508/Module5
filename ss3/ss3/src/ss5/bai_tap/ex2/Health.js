@@ -1,4 +1,4 @@
-import { Formik,Field, ErrorMessage } from "formik";
+import { Formik,Field, ErrorMessage,Form } from "formik";
 import * as Yup from "yup";
 import './health.css';
 export function Health() {
@@ -9,7 +9,7 @@ export function Health() {
                     name: '',
                     idcard: '',
                     date: '',
-                    // gender: '',
+                    gender: '1',
                     country: '',
                     company: '',
                     part: '',
@@ -19,15 +19,17 @@ export function Health() {
                     village: '',
                     phone: '',
                     email: '',
-                    health:''
+                    where: '',
+                    sick: '',
+                    contact: []
                 }}
                 validationSchema={Yup.object({
                   name: Yup.string()
-                  .required("Nam cannot is empty"),
+                  .required("Required"),
                   idcard: Yup.string()
-                  .required("IdCard cannot is empty"),
+                  .required("Required"),
                   date: Yup.string()
-                  .required("Date cannot is empty")
+                  .required("Required")
                   .min(1991,"Vui lòng nhập năm sinh lớn hơn 1990."),
                   country: Yup.string()
                   .required("Required"),
@@ -47,12 +49,17 @@ export function Health() {
                 })
 
                 }
-                onSubmit={(values) => alert("Khai báo thành công")}
+                onSubmit={(values,{setSubmitting}) => {
+                  setSubmitting(false);
+                  console.log(values);
+                  alert("Khai báo thành công")
+                }
+              }
             >
                 {
                     <div className="health">
                     <h1>Tờ khai y tế</h1>
-                    <form>
+                    <Form>
                       <label>Họ tên</label>
                       <Field type="text" name="name" />
                       <ErrorMessage name="name" component='span'/>
@@ -63,9 +70,9 @@ export function Health() {
                       <Field type="number" name="date" />
                       <ErrorMessage name="name" component='span'/>
                       <label>Giới tính</label>
-                      <Field name="gender" type="radio" defaultValue="Nam" />
+                      <Field name="gender" type="radio" value="1" />
                       Nam
-                      <Field name="gender" type="radio" defaultValue="Nữ" />
+                      <Field name="gender" type="radio" value="0" />
                       Nữ
                       <label>Quốc tịch</label>
                       <Field type="text" name="country" />
@@ -75,6 +82,7 @@ export function Health() {
                       <label>Bộ phận làm việc</label>
                       <Field type="text" name="part" />
                       <label>Có thẻ bảo hiểm y tế</label>
+                      <Field type="checkbox" name="insurance" value="insurance"/>
                       <h2>Địa chỉ liên lạc tại Việt Nam</h2>
                       <label>Tỉnh thành</label>
                       <Field type="text" name="city" />
@@ -98,32 +106,32 @@ export function Health() {
                         Trong vòng 14 ngày qua Anh/Chị có đến quốc gia/vùng lãnh thổ nào(Có thể đi
                         qua nhiều quốc gia)
                       </h3>
-                      <Field type="text" name='10' />
+                      <Field as='textarea' name='where' id='where' />
                       <h3>
                         Trong vòng 14 ngày qua Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây
                         không?
                       </h3>
-                      <Field type="checkbox" name="1" defaultValue="Sốt" />
+                      <Field type="checkbox" name="sick" value="Sốt" />
                       Sốt     
-                      <Field type="checkbox" name="2" defaultValue="Ho" />
+                      <Field type="checkbox" name="sick" value="Ho" />
                       Ho
-                      <Field type="checkbox" name="3" defaultValue="Khó thở" />
+                      <Field type="checkbox" name="sick" value="Khó thở" />
                       Khó thở
-                      <Field type="checkbox" name="4" defaultValue="Viêm phổi" />
+                      <Field type="checkbox" name="sick" value="Viêm phổi" />
                       Viêm phổi
-                      <Field type="checkbox" name="5" defaultValue="Đau họng" />
+                      <Field type="checkbox" name="sick" value="Đau họng" />
                       Đau họng
-                      <Field type="checkbox" name="6" defaultValue="Mệt mỏi" />
+                      <Field type="checkbox" name="sick" value="Mệt mỏi" />
                       Mệt mỏi
                       <h3>Trong vòng 14 ngày qua Anh/Chị có tiếp xúc với?</h3>
-                      <Field type="checkbox" name={7} defaultValue={7} /> Người bệnh hoặc nghi
+                      <Field type="checkbox" name="contact" value="c1" /> Người bệnh hoặc nghi
                       ngờ, mắc bệnh COVID-19
-                      <Field type="checkbox" name={8} defaultValue={8} /> Người từ nước có bệnh
+                      <Field type="checkbox" name="contact" value="c2" /> Người từ nước có bệnh
                       COVID-19
-                      <Field type="checkbox" name={9} defaultValue={9} /> Người có biểu hiện (Sốt,
+                      <Field type="checkbox" name="contact" value="c3" /> Người có biểu hiện (Sốt,
                       ho, khó thở, viêm phổi)
                       <button type="submit">Submit</button>
-                    </form>
+                    </Form>
                   </div>
                   
                 }
