@@ -26,10 +26,6 @@ nav {
 }
 
 
-body {
-  height: 100rem;
-}
-
 html,
 body {
   height: 100%;
@@ -70,4 +66,90 @@ p {
 span {
   float: right;
   color: #7f9094;
+}
+img{
+  height: 17rem;
+}
+.choose{
+  font-weight: 500;
+}
+
+/* form edit, create */
+.form { 
+  width: 100%;
+  max-width: 60%;
+  /* width: calc(50%-100px); */
+  height: auto;
+  background-color: #addccf;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+  margin: 1rem;
+}
+.create__form {
+  height: 100%;
+}
+.form__input-content {
+  padding: 0.1rem 2rem 0.1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+input {
+  padding: 0.6rem;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+label {
+  display: inline-block;
+  padding: 10px 10px 5px 10px;
+  font-weight: 600;
+}
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+select option {
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.my-button {
+  width: 6rem;
+  background-color: #e4e9f7; 
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px; 
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 1rem; 
+  border-radius: 4px; 
+}
+.my-button:hover {
+  background-color: rgb(134, 134, 247);
+}
+.form-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.end-buttons {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+}
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e4e9f7;
 }
