@@ -1,0 +1,64 @@
+<style>
+    label{
+        display: block;
+    }
+    .health{
+        margin-left: 7rem;
+    }
+    input{
+        display: block;
+    }
+    button{
+        display: block;
+        margin-top: 1rem;
+    }
+</style>
+
+<div class="health">
+    <h1>Tờ khai y tế</h1>
+    <form>
+        <label>Họ tên</label>
+        <input type="text" name="name"/>
+        <label>Số hộ chiếu/CMND</label>
+        <input type="number" name="idcard"/>
+        <label>Năm Sinh</label>
+        <input type="number" name="date"/>
+        <label>Giới tính</label>
+        <input name="gender" type="radio" value="nam"/>Nam
+        <input name="gender" type="radio" value="nu"/>Nữ
+        <label>Quốc tịch</label>
+        <input type="text" name="country"/>
+        <label>Công ty làm việc</label>
+        <input type="text" name="company"/>
+        <label>Bộ phận làm việc</label>
+        <input type="text" name="part"/>
+        <label>Có thẻ bảo hiểm y tế</label>
+        <h2>Địa chỉ liên lạc tại Việt Nam</h2>
+        <label>Tỉnh thành</label>
+        <input type="text" name="city"/>
+        <label>Quận/huyện</label>
+        <input type="text" name="district"/>
+        <label>Phường/xã</label>
+        <input type="text" name="ward"/>
+        <label>Số nhà, phố, tổ dân phố, thôn, đội</label>
+        <input type="text" name="village"/>
+        <label>Số điện thoại</label>
+        <input type="number" name="phone"/>
+        <label>Email</label>
+        <input type="email" name="email"/>
+        <h3>Trong vòng 14 ngày qua Anh/Chị có đến quốc gia/vùng lãnh thổ nào(Có thể đi qua nhiều quốc gia)</h3>
+        <input type="text"/>
+        <h3>Trong vòng 14 ngày qua Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây không?</h3>
+        <input type="checkbox" name="health" value="Sốt">Sốt
+        <input type="checkbox" name="health" value="Ho">Ho
+        <input type="checkbox" name="health" value="Khó thở">Khó thở
+        <input type="checkbox" name="health" value="Viêm phổi">Viêm phổi
+        <input type="checkbox" name="health" value="Đau họng">Đau họng
+        <input type="checkbox" name="health" value="Mệt mỏi">Mệt mỏi
+        <h3>Trong vòng 14 ngày qua Anh/Chị có tiếp xúc với?</h3>
+        <input type="checkbox" name="1" value="1"/> Người bệnh hoặc nghi ngờ, mắc bệnh COVID-19
+        <input type="checkbox" name="2" value="2"/> Người từ nước có bệnh COVID-19
+        <input type="checkbox" name="3" value="3"/> Người có biểu hiện (Sốt, ho, khó thở, viêm phổi)
+        <button type="submit">Submit</button>
+    </form>
+</div>

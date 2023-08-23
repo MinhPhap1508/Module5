@@ -1,0 +1,13 @@
+label{
+    display: block;
+}
+.health{
+    margin-left: 7rem;
+}
+input{
+    display: block;
+}
+button{
+    display: block;
+    margin-top: 1rem;
+}

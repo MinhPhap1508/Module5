@@ -1,9 +1,8 @@
 import { useState } from "react";
 function useIncrement(addAmount){
     const [count, setCount] = useState(0);
-    function increase(){
-        const newValue = count + addAmount;
-        setCount(newValue);
+    function increase(prev){
+        setCount((prev) => prev + addAmount);
     }
     return[count, increase];
 }
