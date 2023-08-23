@@ -14,7 +14,7 @@ class Todo extends Component {
         })
     }
     handleAddItem = () => {
-        if (this.state.event !== "") {
+        if (this.state.item !== "") {
             this.setState((prev) => ({
                 list: [...prev.list, prev.item],
                 item: "",
