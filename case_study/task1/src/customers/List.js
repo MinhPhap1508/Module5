@@ -1,9 +1,10 @@
-import './list.css';
+import './customer.css';
 export function List(){
     return(
-        <div class="container">
-        <div class="table-function">
+        <div className="container">
+        <div className="table-function">
         <table>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Birth of day</th>
@@ -15,6 +16,8 @@ export function List(){
                 <th>Address</th>
                 <th>Action</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>#</td>
                 <td>#</td>
@@ -26,6 +29,7 @@ export function List(){
                 <td>#</td>
                 <td>#</td>
             </tr>
+            </tbody>
         </table>
         </div>
             </div>

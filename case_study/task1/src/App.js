@@ -8,6 +8,8 @@ import Header from './components/Header';
 import { List } from './customers/List';
 import { CreateCustomer } from './customers/CreateCustomer';
 import { EditCustomer } from './customers/EditCustomer';
+import { Contract } from './contract/Contract';
+import { CreateContract } from './contract/CreateContract';
 function App() {
   return (
     <Router>
@@ -19,6 +21,8 @@ function App() {
         <Route path='/list' element={<List/>}/>
         <Route path='/add-customer' element={<CreateCustomer />}/>
         <Route path='/edit-customer' element={<EditCustomer />}/>
+        <Route path='/contract' element={<Contract />}/>
+        <Route path='/add-contract' element={<CreateContract/>}/>
         </Routes>
     
     </Router>

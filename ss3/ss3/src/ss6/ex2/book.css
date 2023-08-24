@@ -1,0 +1,10 @@
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+label{
+    display: flex;
+}
+button{
+    margin-top: 1rem;
+}

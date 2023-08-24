@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as bookService from "../ex2/BookService"
 import { Link } from "react-router-dom";
+import './book.css'
 export function Library() {
     const [book, setBook] = useState([]);
     useEffect(() => {
@@ -36,7 +37,7 @@ export function Library() {
                             <td>{b.quantity}</td>
                             <td>
                                 <button className="btn btn-primary">Edit</button>
-                                <button className="btn btn-danger" onClick={() => deleteBook(`${book.id}`)}>Delete</button>
+                                <button className="btn btn-danger" onClick={() => deleteBook(b.id)}>Delete</button>
                             </td>
                         </tr>
                     ))
