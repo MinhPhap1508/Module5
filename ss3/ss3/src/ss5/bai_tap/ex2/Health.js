@@ -28,9 +28,9 @@ export function Health() {
                   .required("Required"),
                   idcard: Yup.string()
                   .required("Required"),
-                  date: Yup.string()
+                  date: Yup.number()
                   .required("Required")
-                  .min(1991,"Vui lòng nhập năm sinh lớn hơn 1990."),
+                  .moreThan(1991,"Vui lòng nhập năm sinh lớn hơn 1990."),
                   country: Yup.string()
                   .required("Required"),
                   city: Yup.string()
@@ -45,7 +45,7 @@ export function Health() {
                   .required("Required"),
                   email:Yup.string()
                   .required("Required")
-                  .matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/,"Invalid email address")
+                  .matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,"Invalid email address")
                 })
 
                 }
@@ -65,10 +65,10 @@ export function Health() {
                       <ErrorMessage name="name" component='span'/>
                       <label>Số hộ chiếu/CMND</label>
                       <Field type="number" name="idcard" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="idcard" component='span'/>
                       <label>Năm Sinh</label>
                       <Field type="number" name="date" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="date" component='span'/>
                       <label>Giới tính</label>
                       <Field name="gender" type="radio" value="1" />
                       Nam
@@ -76,7 +76,7 @@ export function Health() {
                       Nữ
                       <label>Quốc tịch</label>
                       <Field type="text" name="country" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="country" component='span'/>
                       <label>Công ty làm việc</label>
                       <Field type="text" name="company" />
                       <label>Bộ phận làm việc</label>
@@ -86,22 +86,22 @@ export function Health() {
                       <h2>Địa chỉ liên lạc tại Việt Nam</h2>
                       <label>Tỉnh thành</label>
                       <Field type="text" name="city" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="city" component='span'/>
                       <label>Quận/huyện</label>
                       <Field type="text" name="district" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="district" component='span'/>
                       <label>Phường/xã</label>
                       <Field type="text" name="ward" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="ward" component='span'/>
                       <label>Số nhà, phố, tổ dân phố, thôn, đội</label>
                       <Field type="text" name="village" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="village" component='span'/>
                       <label>Số điện thoại</label>
                       <Field type="number" name="phone" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="phone" component='span'/>
                       <label>Email</label>
                       <Field type="email" name="email" />
-                      <ErrorMessage name="name" component='span'/>
+                      <ErrorMessage name="email" component='span'/>
                       <h3>
                         Trong vòng 14 ngày qua Anh/Chị có đến quốc gia/vùng lãnh thổ nào(Có thể đi
                         qua nhiều quốc gia)
@@ -132,8 +132,7 @@ export function Health() {
                       ho, khó thở, viêm phổi)
                       <button type="submit">Submit</button>
                     </Form>
-                  </div>
-                  
+                  </div> 
                 }
             </Formik>
         </>
