@@ -23,3 +23,19 @@ export const deleteBook = async (id) => {
         console.log(e);
     }
 }
+export const editBook = async (book,id) => {
+    try{
+        const result = await axios.put('http://localhost:6060/book/'+id,book);
+        return result.data;
+    }catch(e){
+        console.log(e);
+    }
+}
+export const getById = async(id) => {
+    try{
+        const result = await axios.get('http://localhost:6060/book/'+id);
+        return result.data;
+    }catch(e){
+        console.log(e);
+    }
+}

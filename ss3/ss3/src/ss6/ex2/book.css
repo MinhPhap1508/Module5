@@ -8,3 +8,12 @@ label{
 button{
     margin-top: 1rem;
 }
+.add{
+    float: right;
+}
+.title{
+    margin-top: 1rem;
+}
+.btn{
+    margin: 0 5px;
+}

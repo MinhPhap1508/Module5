@@ -19,15 +19,16 @@ export function Library() {
 
     return (
         <div className="container">
-            <h1>Library</h1>
-            <button className="btn btn-success" type="button">
-                <Link to="/create">Add a new Book</Link></button>
+            <div className="title">
+            <span className="fs-2">Library</span>
+                <Link to="/create"><button className="add btn btn-success" type="button">Add a new Book</button></Link>
+                </div>
             <table className="table table-hover">
                 <thead>
                     <tr>
                         <th>Title</th>
                         <th>Quantity</th>
-                        <th>ACtions</th>
+                        <th colSpan={2}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +37,7 @@ export function Library() {
                             <td>{b.title}</td>
                             <td>{b.quantity}</td>
                             <td>
-                                <button className="btn btn-primary">Edit</button>
+                                <Link to={"/edit"+b.id}><button className="btn btn-primary">Edit</button></Link>
                                 <button className="btn btn-danger" onClick={() => deleteBook(b.id)}>Delete</button>
                             </td>
                         </tr>
