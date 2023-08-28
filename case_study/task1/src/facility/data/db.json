@@ -1,0 +1,98 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "serviceName": "Room",
+      "area": 50,
+      "rentalCost": 1000000,
+      "maxCapacity": 2,
+      "rentalType": "Giờ",
+      "roomStandard": "",
+      "amenities": "",
+      "poolArea": "",
+      "floors": 1,
+      "freeServices": [
+        "Wifi",
+        "Đậu xe"
+      ]
+    },
+    {
+      "id": 2,
+      "serviceName": "House",
+      "area": 70,
+      "rentalCost": 1500000,
+      "maxCapacity": 4,
+      "rentalType": "Ngày",
+      "roomStandard": "Tiêu chuẩn 2",
+      "amenities": "Tiện nghi 2",
+      "poolArea": "",
+      "floors": 2,
+      "freeServices": ""
+    },
+    {
+      "id": 3,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": 2000000,
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": ""
+    },
+    {
+      "serviceName": "ok",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "ok",
+      "amenities": "ok",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "ok",
+      "id": 4
+    },
+    {
+      "serviceName": "ok",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "kj",
+      "amenities": "kghk",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "gh",
+      "id": 5
+    },
+    {
+      "serviceName": "erwrwe",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "dafs",
+      "amenities": "fsdf",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "sdfsf",
+      "id": 6
+    },
+    {
+      "serviceName": "dfgdfg",
+      "area": 3,
+      "rentalCost": 3,
+      "maxCapacity": 3,
+      "rentalType": "",
+      "roomStandard": "gdfg",
+      "amenities": "gfdg",
+      "poolArea": 2,
+      "floors": 3,
+      "freeServices": "dg",
+      "id": 7
+    }
+  ]
+}

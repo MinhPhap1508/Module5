@@ -1,0 +1,70 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "fullName": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "gender": "Male",
+      "idCard": "123456789",
+      "phoneNumber": "0987654321",
+      "email": "nguyenvana@example.com",
+      "customerType": "VIP",
+      "address": "Hanoi"
+    },
+    {
+      "id": 2,
+      "fullName": "Tran Thi B",
+      "dateOfBirth": "1995-02-02",
+      "gender": "Female",
+      "idCard": "987654321",
+      "phoneNumber": "0123456789",
+      "email": "tranthib@example.com",
+      "customerType": "Normal",
+      "address": "Ho Chi Minh City"
+    },
+    {
+      "id": 3,
+      "fullName": "Le Van C",
+      "dateOfBirth": "1985-03-03",
+      "gender": "Male",
+      "idCard": "456123789",
+      "phoneNumber": "0369852147",
+      "email": "levanc@example.com",
+      "customerType": "Normal",
+      "address": "Da Nang"
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2025-02-02",
+      "gender": "",
+      "idCard": 6576567,
+      "phoneNumber": "7855785",
+      "email": "okok",
+      "customerType": "",
+      "address": "okoko",
+      "id": 4
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2023-02-02",
+      "gender": "",
+      "idCard": 676,
+      "phoneNumber": "767",
+      "email": "jojo",
+      "customerType": "",
+      "address": "hih",
+      "id": 5
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2024-02-02",
+      "gender": "",
+      "idCard": 867,
+      "phoneNumber": "767",
+      "email": "ok",
+      "customerType": "",
+      "address": "9898",
+      "id": 6
+    }
+  ]
+}

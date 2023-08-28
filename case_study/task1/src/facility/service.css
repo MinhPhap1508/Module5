@@ -1,0 +1,9 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .card-container {
+    margin-top: 1rem;
+    gap: 1rem;  
+  }
