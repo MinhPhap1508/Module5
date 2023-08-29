@@ -12,6 +12,11 @@ export function ListServices() {
         const res = await roomService.getAll();
         setSerVices(res);
     }
+    const deleteService = async (id) => {
+        const res = await roomService.deleteService(id);
+        getRooms();
+        alert("Done");
+    }
     return (
         <>
             <div className="container">
@@ -32,6 +37,7 @@ export function ListServices() {
                                     Diện tích phòng: {s.area} m<sup>2</sup>
                                 </p>
                                 <Link to={`/edit-service/${s.id}`} className="btn btn-primary">Edit</Link>
+                                <button className="btn btn-danger" onClick={() => deleteService(s.id)}>Delete</button>
                             </div>
                         </div>
                     ))}

@@ -11,6 +11,10 @@ export function Customers() {
         const res = await customerService.getAll();
         setCustomer(res);
     }
+    const deleteCustomer = async (id) => {
+        const res = await customerService.deleteCustomer(id);
+        getCustomers();
+    }
     return (
         <div className="container">
             <h1>List Customers</h1>
@@ -27,7 +31,8 @@ export function Customers() {
                             <th>Email</th>
                             <th>Kind of customer</th>
                             <th>Address</th>
-                            <th colSpan={2}>Action</th>
+                            <th colSpan={2}>Action</th> 
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,6 +49,9 @@ export function Customers() {
                                 <td>Delete</td>
                                 <td>
                                     <Link to={`/edit-customer/${c.id}`} className="btn btn-warning">Edit</Link>
+                                </td>
+                                <td>
+                                <button className="btn btn-danger" onClick={() => deleteCustomer(c.id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}

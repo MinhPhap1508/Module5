@@ -76,39 +76,6 @@
       "address": "Da Nang"
     },
     {
-      "fullName": "ok",
-      "dateOfBirth": "2025-02-02",
-      "gender": "",
-      "idCard": 6576567,
-      "phoneNumber": "7855785",
-      "email": "okok",
-      "customerType": "",
-      "address": "okoko",
-      "id": 4
-    },
-    {
-      "fullName": "ok",
-      "dateOfBirth": "2023-02-02",
-      "gender": "",
-      "idCard": 676,
-      "phoneNumber": "767",
-      "email": "jojo",
-      "customerType": "",
-      "address": "hih",
-      "id": 5
-    },
-    {
-      "fullName": "ok",
-      "dateOfBirth": "2024-02-02",
-      "gender": "",
-      "idCard": 867,
-      "phoneNumber": "767",
-      "email": "ok",
-      "customerType": "",
-      "address": "9898",
-      "id": 6
-    },
-    {
       "fullName": "David",
       "dateOfBirth": "2023-01-01",
       "gender": "famale",
@@ -173,45 +140,6 @@
       "poolArea": 40,
       "floors": 3,
       "freeServices": ""
-    },
-    {
-      "serviceName": "ok",
-      "area": 2,
-      "rentalCost": 2,
-      "maxCapacity": 2,
-      "rentalType": "",
-      "roomStandard": "ok",
-      "amenities": "ok",
-      "poolArea": 2,
-      "floors": 2,
-      "freeServices": "ok",
-      "id": 4
-    },
-    {
-      "serviceName": "ok",
-      "area": 2,
-      "rentalCost": 2,
-      "maxCapacity": 2,
-      "rentalType": "",
-      "roomStandard": "kj",
-      "amenities": "kghk",
-      "poolArea": 2,
-      "floors": 2,
-      "freeServices": "gh",
-      "id": 5
-    },
-    {
-      "serviceName": "erwrwe",
-      "area": 2,
-      "rentalCost": 2,
-      "maxCapacity": 2,
-      "rentalType": "",
-      "roomStandard": "dafs",
-      "amenities": "fsdf",
-      "poolArea": 2,
-      "floors": 2,
-      "freeServices": "sdfsf",
-      "id": 6
     }
   ]
 }
