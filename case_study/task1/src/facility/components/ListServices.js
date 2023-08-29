@@ -17,26 +17,26 @@ export function ListServices() {
             <div className="container">
                 <h1 style={{ textAlign: "center", marginTop: "1rem" }}>List Rooms</h1>
                 <Link to="/create-service"><button className="btn btn-primary">Add Service</button></Link>
-                <div className="row">
-                    <div className="d-flex card-container">
-                        {services.map((s) => (
-                            <div key={s.id} className="card">
-                                <img
-                                    src="https://decofuni.vn/Upload/images/tin-tuc/noi-that-phong-ngu-resort.jpg"
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">{s.serviceName}</h5>
-                                    <p className="card-text">
-                                       {s.amenities}
-                                    </p>
-                                    <Link to="/edit-service" className="btn btn-primary">Edit</Link>
-                                </div>
+
+                <div className="d-flex justify-content-between flex-wrap">
+                    {services.map((s) => (
+                        <div key={s.id} className="card shadow">
+                            <img
+                                src="https://decofuni.vn/Upload/images/tin-tuc/noi-that-phong-ngu-resort.jpg"
+                                className="card-img-top"
+                                alt="..."
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title">{s.serviceName}</h5>
+                                <p className="card-text">
+                                    Diện tích phòng: {s.area} m<sup>2</sup>
+                                </p>
+                                <Link to={`/edit-service/${s.id}`} className="btn btn-primary">Edit</Link>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
+
             </div>
         </>
     )

@@ -27,7 +27,7 @@ export function Customers() {
                             <th>Email</th>
                             <th>Kind of customer</th>
                             <th>Address</th>
-                            <th>Action</th>
+                            <th colSpan={2}>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +42,9 @@ export function Customers() {
                                 <td>{c.customerType}</td>
                                 <td>{c.address}</td>
                                 <td>Delete</td>
+                                <td>
+                                    <Link to={`/edit-customer/${c.id}`} className="btn btn-warning">Edit</Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

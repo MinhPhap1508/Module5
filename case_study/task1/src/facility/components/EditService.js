@@ -2,52 +2,70 @@ import * as roomService from "../service/roomService";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-export function CreateService() {
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+export function EditService() {
     const navigate = useNavigate();
-    const addService = async (values) => {
-        await roomService.addService(values);
-        alert("Add service successly");
+    const param = useParams();
+    const [selectedService, setSelectedService] = useState({});
+    const getServiceById = async () => {
+        const result = await roomService.getById(param.id);
+        setSelectedService(result);
+    }
+
+    const editService = async (values) => {
+        await roomService.editService(values);
+        alert("Edit service successly");
         navigate("/");
     }
+
+    useEffect(() => {
+        getServiceById();
+    }, [param])
+
+    if (selectedService.id == null)
+        return null;
+
     return (
         <>
             <Formik
                 initialValues={{
-                    serviceName: "",
-                    area: "",
-                    rentalCost: "",
-                    maxCapacity: "",
-                    rentalType: "",
-                    roomStandard: "",
-                    amenities: "",
-                    poolArea: "",
-                    floors: "",
-                    freeServices: ""
+                    id: selectedService.id,
+                    serviceName: selectedService.serviceName,
+                    area: selectedService.area,
+                    rentalCost: selectedService.rentalCost,
+                    maxCapacity: selectedService.maxCapacity,
+                    rentalType: selectedService.rentalType,
+                    roomStandard: selectedService.roomStandard,
+                    amenities: selectedService.amenities,
+                    poolArea: selectedService.poolArea,
+                    floors: selectedService.floors,
+                    freeServices: selectedService.freeServices
                 }}
                 validationSchema={Yup.object({
                     serviceName: Yup.string()
-                    .required("Service Name cannot is empty")
-                    .matches(/^[a-zA-Z]{2,}$/,"Service Name Invalid"),
+                        .required("Service Name cannot is empty")
+                        .matches(/^[a-zA-Z]{2,}$/, "Service Name Invalid"),
                     area: Yup.number()
-                    .required("Area cannot is empty")
-                    .min(1,"Area should more than 0!"),
+                        .required("Area cannot is empty")
+                        .min(1, "Area should more than 0!"),
                     rentalCost: Yup.string().required("Rental cost cannot is empty"),
                     maxCapacity: Yup.string().required("Capacity cannot is empty"),
                     rentalType: Yup.string().required("Rental type cannot is empty"),
                     poolArea: Yup.number().required("Pool Area cannot is empty!")
-                    .min(1, "Pool area > 0 !"),
+                        .min(1, "Pool area > 0 !"),
                     floors: Yup.number()
-                    .required("Floors cannot is empty")
-                    .min(1,"Floors should geather than 0!")
+                        .required("Floors cannot is empty")
+                        .min(1, "Floors should geather than 0!")
                 })}
                 onSubmit={async (values) => {
-                    await addService(values);
+                    await editService(values);
                 }}
             >
                 {
                     <div className="body">
                         <div className="form">
-                            <div className="form-header">Add Service</div>
+                            <div className="form-header">Edit Service</div>
                             <Form className="create__form">
                                 <div className="form__input-content">
                                     <div className="div">
@@ -64,12 +82,12 @@ export function CreateService() {
                                 <div className="form__input-content">
                                     <div className="div">
                                         <label htmlFor="di">Capacity</label>
-                                        <Field type="number" className="form__input" id="di" name="maxCapacity"/>
+                                        <Field type="number" className="form__input" id="di" name="maxCapacity" />
                                         <ErrorMessage name="maxCapacity" component='span' />
                                     </div>
                                     <div className="div">
                                         <label htmlFor="pool">Pool Area</label>
-                                        <Field type="number" className="form__input" id="pool" name="poolArea"/>
+                                        <Field type="number" className="form__input" id="pool" name="poolArea" />
                                         <ErrorMessage name="poolArea" component='span' />
                                     </div>
                                 </div>
@@ -124,7 +142,7 @@ export function CreateService() {
                                     </div>
                                 </div>
                                 <div className="end-buttons">
-                                    <button className="my-button">Add</button>
+                                    <button className="my-button">Edit</button>
                                 </div>
                             </Form>
                         </div>

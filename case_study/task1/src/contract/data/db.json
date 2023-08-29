@@ -1,0 +1,217 @@
+{
+  "contract": [
+    {
+      "id": 1,
+      "someContracts": "HD-001",
+      "startDate": "12/12/2023",
+      "endDate": "02/02/2024",
+      "deposit": "500",
+      "totalPrice": "2000"
+    },
+    {
+      "id": 2,
+      "someContracts": "HD-002",
+      "startDate": "12/9/2023",
+      "endDate": "02/12/2023",
+      "deposit": "500",
+      "totalPrice": "1500"
+    },
+    {
+      "id": 3,
+      "someContracts": "HD-003",
+      "startDate": "12/10/2023",
+      "endDate": "02/04/2024",
+      "deposit": "1000",
+      "totalPrice": "3000"
+    },
+    {
+      "someContracts": "ok",
+      "startDate": "2024-02-02",
+      "endDate": "2024-02-02",
+      "deposit": 2,
+      "totalPrice": 1000,
+      "id": 4
+    },
+    {
+      "someContracts": "hg213",
+      "startDate": "2024-02-02",
+      "endDate": "2025-02-02",
+      "deposit": 997,
+      "totalPrice": 9779,
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "fullName": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "gender": "Male",
+      "idCard": "123456789",
+      "phoneNumber": "0987654321",
+      "email": "nguyenvana@example.com",
+      "customerType": "VIP",
+      "address": "Hanoi"
+    },
+    {
+      "id": 2,
+      "fullName": "Tran Thi B",
+      "dateOfBirth": "1995-02-02",
+      "gender": "Female",
+      "idCard": "987654321",
+      "phoneNumber": "0123456789",
+      "email": "tranthib@example.com",
+      "customerType": "Normal",
+      "address": "Ho Chi Minh City"
+    },
+    {
+      "id": 3,
+      "fullName": "Le Van C",
+      "dateOfBirth": "1985-03-03",
+      "gender": "Male",
+      "idCard": "456123789",
+      "phoneNumber": "0369852147",
+      "email": "levanc@example.com",
+      "customerType": "Normal",
+      "address": "Da Nang"
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2025-02-02",
+      "gender": "",
+      "idCard": 6576567,
+      "phoneNumber": "7855785",
+      "email": "okok",
+      "customerType": "",
+      "address": "okoko",
+      "id": 4
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2023-02-02",
+      "gender": "",
+      "idCard": 676,
+      "phoneNumber": "767",
+      "email": "jojo",
+      "customerType": "",
+      "address": "hih",
+      "id": 5
+    },
+    {
+      "fullName": "ok",
+      "dateOfBirth": "2024-02-02",
+      "gender": "",
+      "idCard": 867,
+      "phoneNumber": "767",
+      "email": "ok",
+      "customerType": "",
+      "address": "9898",
+      "id": 6
+    },
+    {
+      "fullName": "David",
+      "dateOfBirth": "2023-01-01",
+      "gender": "famale",
+      "idCard": 123123215,
+      "phoneNumber": "+84901234567",
+      "email": "ok@gmail.com",
+      "customerType": "gold",
+      "address": "Da Nang",
+      "id": 7
+    },
+    {
+      "fullName": "Thanh",
+      "dateOfBirth": "2024-02-02",
+      "gender": "famale",
+      "idCard": 123456789,
+      "phoneNumber": "+84912345454",
+      "email": "ok@gmail.com",
+      "customerType": "platinum",
+      "address": "ok",
+      "id": 8
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "serviceName": "Room",
+      "area": 50,
+      "rentalCost": 1000000,
+      "maxCapacity": 2,
+      "rentalType": "Giờ",
+      "roomStandard": "",
+      "amenities": "",
+      "poolArea": "",
+      "floors": 1,
+      "freeServices": [
+        "Wifi",
+        "Đậu xe"
+      ]
+    },
+    {
+      "id": 2,
+      "serviceName": "House",
+      "area": 70,
+      "rentalCost": 1500000,
+      "maxCapacity": 4,
+      "rentalType": "Ngày",
+      "roomStandard": "Tiêu chuẩn 2",
+      "amenities": "Tiện nghi 2",
+      "poolArea": "",
+      "floors": 2,
+      "freeServices": ""
+    },
+    {
+      "id": 3,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": 2000000,
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": ""
+    },
+    {
+      "serviceName": "ok",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "ok",
+      "amenities": "ok",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "ok",
+      "id": 4
+    },
+    {
+      "serviceName": "ok",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "kj",
+      "amenities": "kghk",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "gh",
+      "id": 5
+    },
+    {
+      "serviceName": "erwrwe",
+      "area": 2,
+      "rentalCost": 2,
+      "maxCapacity": 2,
+      "rentalType": "",
+      "roomStandard": "dafs",
+      "amenities": "fsdf",
+      "poolArea": 2,
+      "floors": 2,
+      "freeServices": "sdfsf",
+      "id": 6
+    }
+  ]
+}

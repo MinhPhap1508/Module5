@@ -15,3 +15,18 @@ export const addCustomer = async (customer) => {
         console.log(e);
     }
 }
+export const editCustomer = async (id, customer) => {
+    try{
+        await axios.put('http://localhost:8080/customers'+id,customer)
+    }catch(e){
+        console.log(e);
+    }
+}
+export const getById = async (id) => {
+    try{
+        const res = await axios.get('http://localhost:8080/customers/'+id);
+        return res.data;
+    }catch(e){
+        console.log(e);
+    }
+}

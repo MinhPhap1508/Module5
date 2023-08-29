@@ -3,26 +3,40 @@ import { useNavigate } from "react-router-dom";
 import "../list.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-export function CreateCustomer() {
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+export function EditCustomer() {
     const navigate = useNavigate();
-    const addCustomer = async (values) => {
-        await customerService.addCustomer(values);
+    const param = useParams();
+    const [selectedCustomer, setSelectedCustomer] = useState({});
+    const getCustomerById = async () => {
+        const res = await customerService.getById(param.id);
+        setSelectedCustomer(res);
+    }
+    const editCustomer = async (values) => {
+        await customerService.editCustomer(values);
         
         navigate("/customers");
         alert("Done")
+    }
+    useEffect(() => {
+        getCustomerById();
+    },[param.id])
+    if(selectedCustomer.id == null){
+        return null;
     }
     return (
         <>
             <Formik
                 initialValues={{
-                    fullName: "",
-                    dateOfBirth: "",
-                    gender: "",
-                    idCard: "",
-                    phoneNumber: "",
-                    email: "",
-                    customerType: "",
-                    address: ""
+                    fullName: selectedCustomer.fullName,
+                    dateOfBirth: selectedCustomer.dateOfBirth,
+                    gender: selectedCustomer.gender,
+                    idCard: selectedCustomer.idCard,
+                    phoneNumber: selectedCustomer.phoneNumber,
+                    email: selectedCustomer.email,
+                    customerType: selectedCustomer.customerType,
+                    address: selectedCustomer.address
                 }}
                 validationSchema={Yup.object({
                     fullName: Yup.string()
@@ -45,7 +59,7 @@ export function CreateCustomer() {
                         customerType: Yup.string().required("Type cannot is empty!")
                 })}
                 onSubmit={async (values) => {
-                    await addCustomer(values);
+                    await editCustomer(values);
                 }}
             >
                 {

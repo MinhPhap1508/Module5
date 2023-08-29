@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import "../style.css"
 function Header(){
     return(
         <nav className="navbar navbar-expand-sm">
@@ -7,16 +9,17 @@ function Header(){
                     <a className="logo" href="/#">FURAMA</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Home</a>
+                    <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Customers</a>
+                    {/* <a className="nav-link" href="/#">Customers</a> */}
+                    <Link className="nav-link" to="/customers">Customers</Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/#">Rooms</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Spa</a>
+                    <Link className="nav-link" to="/contract">Contract</Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/#">Entertainment</a>
