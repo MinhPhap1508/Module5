@@ -1,15 +1,21 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GET_ALL_USERS } from "../redux/action";
+import { DELETE, GET_ALL_USERS } from "../redux/action";
 function User() {
     const users = useSelector((state) => state.users);
     const dispatch = useDispatch();
     console.log(users);
     useEffect(() => {
         dispatch({
-            type: GET_ALL_USERS,
+            type: GET_ALL_USERS
         })
-    }, [])
+    }, [dispatch])
+    const removeUser = (id) =>{
+        dispatch({
+            type: DELETE,
+            payload: id
+        });
+    }
     return (
         <div>
             <h1>User List</h1>
@@ -20,6 +26,7 @@ function User() {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Website</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +37,9 @@ function User() {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.website}</td>
+                                <td>
+                                    <button onClick={()=>removeUser(user.id)}>Delete</button>
+                                </td>
                             </tr>
                         )
                     })}

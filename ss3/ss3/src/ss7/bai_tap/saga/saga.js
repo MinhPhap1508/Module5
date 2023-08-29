@@ -1,10 +1,9 @@
 import axios from "axios";
 import { put, takeLatest } from "redux-saga/effects";
-import { FETCH_SUCCESS, GET_ALL_USERS,DELETE_SUCCESS,DELETE } from "../redux/action";
-const BaseURL = "http://localhost:8080/users";
+import { FETCH_SUCCESS, GET_ALL_USERS,DELETE } from "../redux/action";
 function* getAll(action) {
     try {
-        const res = yield axios.get(BaseURL);
+        const res = yield axios.get("http://localhost:8080/users");
         yield put({
             type: FETCH_SUCCESS,
             payload: res.data
@@ -14,12 +13,18 @@ function* getAll(action) {
         console.log(e);
     }
 }
-function* getRemove() {
+function* Remove(action) {
 try{
-    const res = yield axios.delete("http://localhost:8080/users"+id);
+    const id = action.payload;
+     yield axios.delete("http://localhost:8080/users/"+id);
+    yield put({
+        type: GET_ALL_USERS
+    });
+}catch(e){
+    console.log(e);
 }
 }
 export default function* rootSaga() {
     yield takeLatest(GET_ALL_USERS, getAll);
-    yield takeLatest(DELETE, getRemove);
+    yield takeLatest(DELETE, Remove);
 }
