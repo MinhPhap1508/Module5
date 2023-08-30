@@ -1,8 +1,11 @@
-import { getListCovid } from "./db"
-export default function List() {
+import axios from "axios"
+
+// import { getListCovid } from "./db"
+export default function List({data}) {
     return (
         <div>
-            <table>
+            <h1>Vietnam's COVID-19 Information</h1>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -14,7 +17,7 @@ export default function List() {
                 </thead>
                 <tbody>
                     {
-                        getListCovid().map((list) => (
+                        data.map((list) => (
                             <tr key={list.id}>
                                 <td>{list.date}</td>
                                 <td>{list.confirmed}</td>
@@ -29,3 +32,12 @@ export default function List() {
         </div>
     )
 }
+export async function getStaticProps(){
+    const res = await axios.get("http://localhost:8081/covid")
+    const data = res.data;
+    return{
+        props: {
+            data
+        }
+    }
+}   
