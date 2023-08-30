@@ -76,26 +76,15 @@
       "address": "Da Nang"
     },
     {
-      "fullName": "David",
+      "id": 7,
+      "fullName": "Davi",
       "dateOfBirth": "2023-01-01",
       "gender": "famale",
       "idCard": 123123215,
       "phoneNumber": "+84901234567",
       "email": "ok@gmail.com",
       "customerType": "gold",
-      "address": "Da Nang",
-      "id": 7
-    },
-    {
-      "fullName": "Thanh",
-      "dateOfBirth": "2024-02-02",
-      "gender": "famale",
-      "idCard": 123456789,
-      "phoneNumber": "+84912345454",
-      "email": "ok@gmail.com",
-      "customerType": "platinum",
-      "address": "ok",
-      "id": 8
+      "address": "Da Nang"
     }
   ],
   "services": [
@@ -118,15 +107,16 @@
     {
       "id": 2,
       "serviceName": "House",
-      "area": 70,
+      "area": 34,
       "rentalCost": 1500000,
       "maxCapacity": 4,
       "rentalType": "Ngày",
       "roomStandard": "Tiêu chuẩn 2",
       "amenities": "Tiện nghi 2",
-      "poolArea": "",
+      "poolArea": 12,
       "floors": 2,
-      "freeServices": ""
+      "freeServices": "",
+      "renalType": "date"
     },
     {
       "id": 3,

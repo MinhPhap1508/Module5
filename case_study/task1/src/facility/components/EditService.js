@@ -8,19 +8,19 @@ export function EditService() {
     const navigate = useNavigate();
     const param = useParams();
     const [selectedService, setSelectedService] = useState({});
-    const getServiceById = async () => {
-        const result = await roomService.getById(param.id);
+    const getServiceById = async (id) => {
+        const result = await roomService.getById(id);
         setSelectedService(result);
     }
 
-    const editService = async (values) => {
-        await roomService.editService(values);
+    const loadService = async (values) => {
+        await roomService.editService(values.id, values);
         alert("Edit service successly");
         navigate("/");
     }
 
     useEffect(() => {
-        getServiceById();
+        getServiceById(param.id);
     }, [param])
 
     if (selectedService.id == null)
@@ -59,7 +59,7 @@ export function EditService() {
                         .min(1, "Floors should geather than 0!")
                 })}
                 onSubmit={async (values) => {
-                    await editService(values);
+                    await loadService(values);
                 }}
             >
                 {

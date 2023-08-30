@@ -16,7 +16,7 @@ export const addService = async (service) => {
 }
 export const editService = async (id, service) => {
     try{
-        await axios.put("http://localhost:8080/services"+id, service)
+        await axios.put("http://localhost:8080/services/"+id, service)
     }catch(e){
         console.log(e);
     }

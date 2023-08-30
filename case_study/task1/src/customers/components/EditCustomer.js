@@ -13,7 +13,7 @@ export function EditCustomer() {
         const res = await customerService.getById(param.id);
         setSelectedCustomer(res);
     }
-    const editCustomer = async (values) => {
+    const loadCustomer = async (values) => {
         await customerService.editCustomer(values);
         
         navigate("/customers");
@@ -29,6 +29,7 @@ export function EditCustomer() {
         <>
             <Formik
                 initialValues={{
+                    id: selectedCustomer.id,
                     fullName: selectedCustomer.fullName,
                     dateOfBirth: selectedCustomer.dateOfBirth,
                     gender: selectedCustomer.gender,
@@ -59,7 +60,7 @@ export function EditCustomer() {
                         customerType: Yup.string().required("Type cannot is empty!")
                 })}
                 onSubmit={async (values) => {
-                    await editCustomer(values);
+                    await loadCustomer(values);
                 }}
             >
                 {

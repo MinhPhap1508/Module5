@@ -15,9 +15,9 @@ export const addCustomer = async (customer) => {
         console.log(e);
     }
 }
-export const editCustomer = async (id, customer) => {
+export const editCustomer = async (customer) => {
     try{
-        await axios.put('http://localhost:8080/customers'+id,customer)
+        await axios.put('http://localhost:8080/customers/'+customer.id,customer)
     }catch(e){
         console.log(e);
     }

@@ -6,29 +6,28 @@ function Header(){
         <div className="container-fluid d-flex justify-content-start">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <a className="logo" href="/#">FURAMA</a>
+                    <Link className="logo" href="/#">FURAMA</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    {/* <a className="nav-link" href="/#">Customers</a> */}
                     <Link className="nav-link" to="/customers">Customers</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Rooms</a>
+                    <Link className="nav-link" href="/#">Rooms</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/contract">Contract</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Entertainment</a>
+                    <Link className="nav-link" href="/#">Entertainment</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Service</a>
+                    <Link className="nav-link" href="/#">Service</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Endow</a>
+                    <Link className="nav-link" href="/#">Endow</Link>
                 </li>
             </ul>
         </div>
