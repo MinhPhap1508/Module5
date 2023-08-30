@@ -13,7 +13,7 @@ function* getAll(action) {
         console.log(e);
     }
 }
-function* Remove(action) {
+function* deleteUser(action) {
 try{
     const id = action.payload;
      yield axios.delete("http://localhost:8080/users/"+id);
@@ -26,5 +26,5 @@ try{
 }
 export default function* rootSaga() {
     yield takeLatest(GET_ALL_USERS, getAll);
-    yield takeLatest(DELETE, Remove);
+    yield takeLatest(DELETE, deleteUser);
 }
