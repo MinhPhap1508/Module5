@@ -1,0 +1,138 @@
+{
+  "books": [
+    {
+      "id": 2,
+      "name": "zzzzz",
+      "price": 12,
+      "author": "ok",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      }
+    },
+    {
+      "id": 3,
+      "name": "okoko",
+      "price": 232,
+      "author": "okok",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      }
+    },
+    {
+      "name": "11",
+      "price": 111,
+      "author": "111",
+      "category": {
+        "id": 2,
+        "name": "Toán"
+      },
+      "id": 7
+    },
+    {
+      "name": "kk",
+      "price": 24,
+      "author": "kk",
+      "category": {
+        "id": 2,
+        "name": "Toán"
+      },
+      "id": 9
+    },
+    {
+      "name": "Nhuộm tóc",
+      "price": 99999,
+      "author": "TMP",
+      "category": {
+        "id": 2,
+        "name": "Toán"
+      },
+      "id": 10
+    },
+    {
+      "name": "lll",
+      "price": 241,
+      "author": "lll",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 11
+    },
+    {
+      "name": "hhj",
+      "price": 5,
+      "author": "656",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 12
+    },
+    {
+      "name": "ok",
+      "price": 423,
+      "author": "878",
+      "category": {
+        "id": 2,
+        "name": "Toán"
+      },
+      "id": 14
+    },
+    {
+      "name": "7",
+      "price": 7,
+      "author": "7",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 15
+    },
+    {
+      "name": "09",
+      "price": 90,
+      "author": "9",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 16
+    },
+    {
+      "name": "878",
+      "price": 78,
+      "author": "87",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 17
+    },
+    {
+      "name": "000",
+      "price": 0,
+      "author": "00",
+      "category": {
+        "id": 1,
+        "name": "Văn học"
+      },
+      "id": 18
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Văn học"
+    },
+    {
+      "id": 2,
+      "name": "Toán"
+    },
+    {
+      "id": 3,
+      "name": "ngoại ngữ"
+    }
+  ]
+}

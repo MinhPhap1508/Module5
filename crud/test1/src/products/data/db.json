@@ -1,0 +1,40 @@
+{
+  "clothing": [
+    {
+      "id": 1,
+      "code": "CLO-001",
+      "name": "Áo sơ mi",
+      "date": "02/02/2023",
+      "quantity": 100,
+      "type": {
+        "id": 3,
+        "name": "Phụ kiện"
+      }
+    },
+    {
+      "id": 2,
+      "code": "CLO-002",
+      "name": "Áo ",
+      "date": "02/09/2023",
+      "quantity": 9,
+      "type": {
+        "id": 2,
+        "name": "Quần"
+      }
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Áo"
+    },
+    {
+      "id": 2,
+      "name": "Quần"
+    },
+    {
+      "id": 3,
+      "name": "Phụ kiện"
+    }
+  ]
+}
